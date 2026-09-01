@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neeldavid's Salon Golbagan — Where Beauty Meets Luxury</title>
+    <meta name="description" content="Neeldavid's Salon Golbagan — premium hair, bridal, makeup, skin and spa studio in Cooch Behar, West Bengal." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== reset & base ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --black: #0b0a08;
+            --charcoal: #141210;
+            --charcoal-2: #1c1915;
+            --gold: #b8894f;
+            --gold-bright: #d9ad6e;
+            --champagne: #efe3ca;
+            --ivory: #faf7f1;
+            --ink: #1c1712;
+            --line: rgba(184, 137, 79, 0.35);
+            --line-soft: rgba(184, 137, 79, 0.18);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            background: var(--ivory);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        section {
+            position: relative;
+        }
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .eyebrow {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            color: var(--gold);
+            font-weight: 500;
+        }
+        .rule {
+            width: 56px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 34px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--champagne);
+            cursor: pointer;
+            transition: background .35s ease, color .35s ease, border-color .35s ease;
+            white-space: nowrap;
+        }
+        .btn:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        .btn-solid {
+            background: var(--gold);
+            color: var(--black);
+        }
+        .btn-solid:hover {
+            background: var(--gold-bright);
+            border-color: var(--gold-bright);
+        }
+        .btn-dark {
+            border-color: var(--gold);
+            color: var(--ink);
+        }
+        .btn-dark:hover {
+            background: var(--ink);
+            color: var(--champagne);
+            border-color: var(--ink);
+        }
+
+        /* ===== header ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 22px 0;
+            transition: background .4s ease, padding .4s ease, box-shadow .4s ease;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+        header.scrolled {
+            background: rgba(11, 10, 8, 0.94);
+            padding: 14px 0;
+            box-shadow: 0 1px 0 var(--line-soft);
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .logo .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--champagne);
+            letter-spacing: 0.02em;
+        }
+        .logo .sub {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.32em;
+            color: var(--gold);
+            margin-top: 5px;
+        }
+
+        nav.primary-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex: 1 1 auto;
+            justify-content: center;
+        }
+        nav.primary-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+        nav.primary-nav a {
+            font-size: 0.9rem;
+            color: var(--champagne);
+            position: relative;
+            padding-bottom: 4px;
+            white-space: nowrap;
+        }
+        nav.primary-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width .3s ease;
+        }
+        nav.primary-nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            flex-shrink: 0;
+        }
+        .nav-cta .btn-solid {
+            display: inline-flex;
+            padding: 11px 24px;
+            font-size: 0.82rem;
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+        .menu-toggle span {
+            width: 24px;
+            height: 1px;
+            background: var(--champagne);
+            transition: transform .3s ease, opacity .3s ease;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            z-index: 1200;
+            flex-direction: column;
+            padding: 28px 32px;
+            transform: translateY(-100%);
+            transition: transform .45s ease;
+            overflow-y: auto;
+        }
+        .mobile-nav.open {
+            transform: translateY(0);
+        }
+        .mobile-nav .close-mobile {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            color: var(--champagne);
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .mobile-nav ul {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 0;
+        }
+        .mobile-nav a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            color: var(--champagne);
+        }
+        .mobile-nav .btn {
+            margin-top: 36px;
+            align-self: flex-start;
+        }
+
+        /* ===== hero ===== */
+        .hero {
+            height: 100svh;
+            min-height: 560px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            background-image: linear-gradient(180deg, rgba(11, 10, 8, 0.35) 0%, rgba(11, 10, 8, 0.35) 40%, rgba(11, 10, 8, 0.92) 100%), url('https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center 30%;
+        }
+        .hero-content {
+            padding: 0 32px 90px;
+            max-width: 1240px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-content .rule {
+            background: var(--gold);
+            margin-bottom: 22px;
+            opacity: 0;
+            animation: riseIn .8s ease .15s forwards;
+        }
+        .hero h1 {
+            font-size: clamp(2.6rem, 6vw, 5.2rem);
+            color: var(--ivory);
+            max-width: 820px;
+            opacity: 0;
+            animation: riseIn .9s ease .3s forwards;
+        }
+        .hero h1 em {
+            color: var(--gold-bright);
+            font-style: italic;
+        }
+        .hero p {
+            margin-top: 22px;
+            max-width: 480px;
+            color: var(--champagne);
+            font-size: 1.05rem;
+            font-weight: 300;
+            opacity: 0;
+            animation: riseIn .9s ease .55s forwards;
+        }
+        .hero-actions {
+            margin-top: 38px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: riseIn .9s ease .8s forwards;
+        }
+        @keyframes riseIn {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-content .rule,
+            .hero h1,
+            .hero p,
+            .hero-actions {
+                animation: none;
+                opacity: 1;
+            }
+        }
+
+        /* ===== about ===== */
+        .about {
+            background: var(--ivory);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 640px;
+        }
+        .about-image {
+            background-image: url('https://images.unsplash.com/photo-1629397685944-7073f5589754?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 420px;
+        }
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 90px 64px;
+        }
+        .about-text .rule {
+            margin-bottom: 22px;
+        }
+        .about-text h2 {
+            font-size: clamp(2rem, 3.4vw, 2.8rem);
+            max-width: 440px;
+        }
+        .about-text p {
+            margin-top: 22px;
+            max-width: 440px;
+            color: #463c30;
+        }
+        .about-text .btn {
+            margin-top: 34px;
+            align-self: flex-start;
+            border-color: var(--gold);
+            color: var(--ink);
+        }
+        .about-text .btn:hover {
+            background: var(--ink);
+            color: var(--champagne);
+        }
+
+        /* ================================================================
+                   SERVICES — PREMIUM FAQ ACCORDION (single-open)
+                   ================================================================ */
+        .services {
+            background: var(--charcoal);
+            padding: 110px 0 120px;
+        }
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .section-head .rule {
+            margin-bottom: 22px;
+        }
+        .section-head h2 {
+            color: var(--ivory);
+            font-size: clamp(2rem, 3.6vw, 3rem);
+        }
+        .section-head p {
+            max-width: 360px;
+            color: var(--champagne);
+            opacity: 0.75;
+            font-size: 0.95rem;
+        }
+
+        .services-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--line-soft);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--line-soft);
+            transition: border-color .4s ease;
+        }
+        .accordion-item:hover {
+            border-color: rgba(184, 137, 79, 0.5);
+        }
+
+        .accordion-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 26px 8px 26px 4px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--champagne);
+            text-align: left;
+            transition: color .3s ease, padding .3s ease;
+            letter-spacing: 0.02em;
+            gap: 20px;
+            position: relative;
+        }
+        .accordion-trigger:hover {
+            color: var(--gold-bright);
+        }
+        .accordion-trigger .icon-wrap {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .4s ease;
+        }
+        .accordion-trigger .icon-wrap svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            stroke-width: 1.8;
+            fill: none;
+            transition: stroke .3s ease, transform .4s ease;
+        }
+        .accordion-trigger .icon-wrap .plus {
+            display: block;
+        }
+        .accordion-trigger .icon-wrap .minus {
+            display: none;
+        }
+        .accordion-item.active .accordion-trigger .icon-wrap .plus {
+            display: none;
+        }
+        .accordion-item.active .accordion-trigger .icon-wrap .minus {
+            display: block;
+        }
+        .accordion-item.active .accordion-trigger .icon-wrap {
+            transform: rotate(180deg);
+        }
+        .accordion-item.active .accordion-trigger .icon-wrap svg {
+            stroke: var(--gold-bright);
+        }
+
+        .accordion-trigger .title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex: 1;
+        }
+        .accordion-trigger .title-wrap .gold-line {
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+            opacity: 0.5;
+            transition: opacity .3s ease, width .3s ease;
+        }
+        .accordion-item.active .accordion-trigger .title-wrap .gold-line {
+            opacity: 1;
+            width: 40px;
+        }
+        .accordion-trigger .title-wrap .service-name {
+            font-size: inherit;
+            font-weight: 500;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* panel — max-height controlled by JS via inline style, transition works both ways */
+        .accordion-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease, padding 0.4s ease;
+            opacity: 0;
+            padding: 0 4px 0 46px;
+        }
+        .accordion-item.active .accordion-panel {
+            opacity: 1;
+            padding: 0 4px 36px 46px;
+            /* max-height set via JS inline style */;
+        }
+
+        .accordion-panel p {
+            color: var(--champagne);
+            opacity: 0.8;
+            font-size: 0.98rem;
+            line-height: 1.75;
+            max-width: 780px;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+            margin: 0;
+        }
+
+        .accordion-panel .book-now-inline {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            transition: color .3s ease;
+            font-weight: 400;
+        }
+        .accordion-panel .book-now-inline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 1px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+        .accordion-panel .book-now-inline:hover {
+            color: var(--gold-bright);
+        }
+        .accordion-panel .book-now-inline:hover::after {
+            transform: scaleX(1);
+        }
+        .accordion-panel .book-now-inline svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ===== gallery (dark text fix) ===== */
+        .gallery {
+            background: var(--ivory);
+            padding: 110px 0 120px;
+        }
+        /* override heading & paragraph colors for gallery — dark on light background */
+        .gallery .section-head h2 {
+            color: var(--ink);
+        }
+        .gallery .section-head p {
+            color: #5c5142;
+            opacity: 0.85;
+        }
+
+        .gallery-grid {
+            columns: 4 260px;
+            column-gap: 16px;
+        }
+        .gallery-grid figure {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        .gallery-grid img {
+            width: 100%;
+            display: block;
+            transition: transform .6s ease;
+        }
+        .gallery-grid figure:hover img {
+            transform: scale(1.06);
+        }
+        .gallery-grid figure::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid transparent;
+            transition: border-color .35s ease;
+        }
+        .gallery-grid figure:hover::after {
+            border-color: var(--gold);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 10, 8, 0.96);
+            z-index: 1300;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .lightbox.open {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 82vh;
+        }
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            background: none;
+            border: none;
+            color: var(--champagne);
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .lightbox-close {
+            top: 26px;
+            right: 32px;
+        }
+        .lightbox-prev {
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .lightbox-next {
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* ===== reviews ===== */
+        .reviews {
+            background: var(--black);
+            padding: 110px 0 120px;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line-soft);
+            border: 1px solid var(--line-soft);
+        }
+        .review-card {
+            background: var(--black);
+            padding: 38px 32px;
+        }
+        .stars {
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+        .review-card p.quote {
+            color: var(--champagne);
+            font-size: 1rem;
+            opacity: 0.88;
+        }
+        .review-card .reviewer {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line-soft);
+        }
+        .review-card .reviewer .name {
+            color: var(--ivory);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+        }
+        .review-card .reviewer .role {
+            color: var(--gold);
+            font-size: 0.78rem;
+            margin-top: 2px;
+        }
+
+        /* ===== booking ===== */
+        .booking {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            background: var(--champagne);
+        }
+        .booking-image {
+            background-image: url('https://images.unsplash.com/photo-1636023730877-233b9237d4ec?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 420px;
+        }
+        .booking-form-wrap {
+            padding: 90px 64px;
+        }
+        .booking-form-wrap .rule {
+            background: var(--gold);
+            margin-bottom: 22px;
+        }
+        .booking-form-wrap h2 {
+            font-size: clamp(2rem, 3.4vw, 2.7rem);
+            color: var(--ink);
+        }
+        .booking-form-wrap p.lead {
+            margin-top: 16px;
+            color: #5c5142;
+            max-width: 440px;
+        }
+        form.booking-form {
+            margin-top: 38px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+        form.booking-form .full {
+            grid-column: 1 / -1;
+        }
+        .field label {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            color: #5c5142;
+            margin-bottom: 8px;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgba(28, 23, 18, 0.28);
+            background: transparent;
+            padding: 10px 2px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+            outline: none;
+            transition: border-color .3s ease;
+        }
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--gold);
+        }
+        .field textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+        form.booking-form .btn-submit {
+            margin-top: 6px;
+            padding: 16px 40px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            border-color: var(--gold);
+            color: var(--ink);
+            background: var(--gold);
+            transition: background .35s ease, color .35s ease, border-color .35s ease, transform .25s ease;
+            cursor: pointer;
+            border: 1px solid var(--gold);
+            font-family: 'Jost', sans-serif;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        form.booking-form .btn-submit:hover {
+            background: var(--gold-bright);
+            border-color: var(--gold-bright);
+            transform: scale(1.01);
+        }
+        .form-note {
+            margin-top: 16px;
+            font-size: 0.82rem;
+            color: #6b6151;
+            grid-column: 1 / -1;
+        }
+
+        /* ===== location ===== */
+        .location .section-head h2 {
+            color: var(--ink);
+        }
+
+        .location .section-head p {
+            color: #5c5142;
+            opacity: 0.85;
+        }
+        .location {
+            background: var(--ivory);
+            padding: 110px 0 120px;
+        }
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 0;
+            align-items: stretch;
+        }
+        .map-frame {
+            border: 1px solid var(--line);
+            filter: grayscale(0.15);
+            min-height: 420px;
+            height: 100%;
+        }
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            border: 0;
+            display: block;
+        }
+        .contact-card {
+            background: var(--black);
+            padding: 48px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .contact-card .rule {
+            background: var(--gold);
+            margin-bottom: 20px;
+        }
+        .contact-card h3 {
+            color: var(--ivory);
+            font-size: 1.7rem;
+        }
+        .contact-card .addr {
+            color: var(--champagne);
+            opacity: 0.8;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+        .contact-card .phone {
+            color: var(--gold-bright);
+            margin-top: 14px;
+            font-size: 1.1rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .contact-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .contact-actions .btn {
+            padding: 12px 22px;
+            font-size: 0.85rem;
+        }
+
+        /* ===== footer ===== */
+        footer {
+            background: var(--black);
+            padding: 80px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--line-soft);
+        }
+        footer .logo .name {
+            color: var(--champagne);
+        }
+        footer .footer-desc {
+            margin-top: 18px;
+            color: var(--champagne);
+            opacity: 0.65;
+            font-size: 0.9rem;
+            max-width: 280px;
+        }
+        footer h4 {
+            font-family: 'Jost', sans-serif;
+            color: var(--gold);
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+        footer ul li {
+            margin-bottom: 11px;
+            color: var(--champagne);
+            opacity: 0.72;
+            font-size: 0.9rem;
+            transition: opacity .25s ease, color .25s ease;
+        }
+        footer ul a {
+            color: var(--champagne);
+            opacity: 0.72;
+            font-size: 0.9rem;
+            transition: opacity .25s ease, color .25s ease;
+        }
+        footer ul a:hover {
+            opacity: 1;
+            color: var(--gold-bright);
+        }
+        .footer-contact-icons {
+            display: flex;
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .icon-circle {
+            width: 38px;
+            height: 38px;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            transition: background .3s ease, color .3s ease;
+        }
+        .icon-circle:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        .icon-circle svg {
+            width: 16px;
+            height: 16px;
+        }
+        .footer-bottom {
+            padding: 26px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.82rem;
+            color: var(--champagne);
+            opacity: 0.55;
+        }
+
+        /* ================================================================
+                   RESPONSIVE
+                   ================================================================ */
+        @media (max-width: 980px) {
+            nav.primary-nav {
+                display: none !important;
+            }
+            .nav-cta .btn-solid {
+                display: none !important;
+            }
+            .menu-toggle {
+                display: flex !important;
+            }
+            .mobile-nav {
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                min-height: 320px;
+            }
+            .about-text {
+                padding: 60px 32px;
+            }
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .booking {
+                grid-template-columns: 1fr;
+            }
+            .booking-image {
+                min-height: 260px;
+            }
+            .booking-form-wrap {
+                padding: 56px 32px;
+            }
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .map-frame {
+                min-height: 320px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .accordion-trigger {
+                font-size: 1.15rem;
+                padding: 22px 4px 22px 2px;
+            }
+            .accordion-item.active .accordion-panel {
+                padding: 0 4px 28px 28px;
+            }
+            .accordion-panel {
+                padding: 0 4px 0 28px;
+            }
+            .accordion-trigger .title-wrap .gold-line {
+                width: 18px;
+            }
+            .accordion-item.active .accordion-trigger .title-wrap .gold-line {
+                width: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 22px;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            form.booking-form {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                columns: 2 200px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+            .hero-content {
+                padding: 0 22px 64px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-card {
+                padding: 38px 26px;
+            }
+
+            .accordion-trigger {
+                font-size: 1rem;
+                padding: 18px 2px 18px 0;
+                gap: 14px;
+            }
+            .accordion-item.active .accordion-panel {
+                padding: 0 2px 22px 18px;
+            }
+            .accordion-panel {
+                padding: 0 2px 0 18px;
+            }
+            .accordion-panel p {
+                font-size: 0.88rem;
+            }
+            .accordion-trigger .title-wrap .gold-line {
+                width: 14px;
+            }
+            .accordion-item.active .accordion-trigger .title-wrap .gold-line {
+                width: 22px;
+            }
+            .accordion-trigger .icon-wrap svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .booking-form-wrap {
+                padding: 36px 18px;
+            }
+            .contact-card {
+                padding: 28px 18px;
+            }
+            .contact-actions {
+                flex-direction: column;
+            }
+            .contact-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .accordion-trigger {
+                font-size: 0.92rem;
+                padding: 16px 0 16px 0;
+            }
+            .accordion-item.active .accordion-panel {
+                padding: 0 0 18px 12px;
+            }
+            .accordion-panel {
+                padding: 0 0 0 12px;
+            }
+            .accordion-panel p {
+                font-size: 0.84rem;
+            }
+        }
+
+        @media (min-width: 981px) {
+            .mobile-nav {
+                display: none !important;
+            }
+            .menu-toggle {
+                display: none !important;
+            }
+            nav.primary-nav {
+                display: flex !important;
+            }
+            .nav-cta .btn-solid {
+                display: inline-flex !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== header ===== -->
+    <header id="siteHeader">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span class="name">Neeldavid's</span>
+                <span class="sub">SALON GOLBAGAN</span>
+            </a>
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#booking" class="btn btn-solid">Book Appointment</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== mobile nav ===== -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-mobile" id="closeMobile" aria-label="Close menu">&times;</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-solid">Book Appointment</a>
+    </div>
+
+    <!-- ===== hero ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="rule"></div>
+            <h1>Where Beauty<br />Meets <em>Luxury</em></h1>
+            <p>An intimate Golbagan retreat for hair, bridal beauty and skin — crafted with precision, finished with grace.</p>
+            <div class="hero-actions">
+                <a href="#booking" class="btn btn-solid">Book an Appointment</a>
+                <a href="#services" class="btn">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== about ===== -->
+    <section class="about" id="about">
+        <div class="about-image"></div>
+        <div class="about-text">
+            <div class="rule" style="background:var(--gold);"></div>
+            <h2>Your Beauty,<br />Our Signature</h2>
+            <p>Every visit begins with a conversation, not a checklist. Our stylists and therapists take the time to understand your features, your lifestyle and your occasion, then bring professional technique and genuinely personal care to every service — from a first haircut to a wedding morning.</p>
+            <a href="#services" class="btn">Discover Services</a>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    SERVICES — PREMIUM FAQ ACCORDION (single-open)
+    ================================================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <div class="rule" style="background:var(--gold);"></div>
+                    <h2>Signature Services</h2>
+                </div>
+                <p>Fifteen bespoke treatments, each performed by a specialist and tailored to you.</p>
+            </div>
+
+            <div class="services-accordion" id="servicesAccordion">
+                <!-- injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== gallery ===== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <div class="rule" style="background:var(--gold);"></div>
+                    <h2>Gallery</h2>
+                </div>
+                <p>A look inside the studio — hair, bridal, skin and nails.</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== lightbox ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+        <img id="lightboxImg" src="" alt="" />
+        <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+    </div>
+
+    <!-- ===== reviews ===== -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <div class="rule" style="background:var(--gold);"></div>
+                    <h2 style="color:var(--ivory);">What Clients Say</h2>
+                </div>
+                <p style="color:var(--champagne);opacity:0.75;">Real words from people who trust us with their look.</p>
+            </div>
+            <div class="reviews-grid" id="reviewsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== booking ===== -->
+    <section class="booking" id="booking">
+        <div class="booking-image"></div>
+        <div class="booking-form-wrap">
+            <div class="rule"></div>
+            <h2>Reserve Your Appointment</h2>
+            <p class="lead">Tell us what you'd like and when — we'll confirm your slot over WhatsApp within the day.</p>
+            <form class="booking-form" id="bookingForm">
+                <div class="field">
+                    <label for="bName">Name</label>
+                    <input type="text" id="bName" required />
+                </div>
+                <div class="field">
+                    <label for="bPhone">Phone Number</label>
+                    <input type="tel" id="bPhone" required />
+                </div>
+                <div class="field full">
+                    <label for="bService">Choose Service</label>
+                    <select id="bService" required>
+                        <option value="">Select a service</option>
+                        <option>Balayage</option>
+                        <option>Body Waxing</option>
+                        <option>Bridal Services</option>
+                        <option>Facials</option>
+                        <option>Haircut</option>
+                        <option>Hairstyling</option>
+                        <option>Hair Threading</option>
+                        <option>Make-up</option>
+                        <option>Manicure</option>
+                        <option>Pedicure</option>
+                        <option>Shampoo &amp; Conditioning</option>
+                        <option>Skin Care</option>
+                        <option>Spa Services</option>
+                        <option>Waxing</option>
+                        <option>Wedding &amp; Event Preparation</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="bDate">Date</label>
+                    <input type="date" id="bDate" required />
+                </div>
+                <div class="field">
+                    <label for="bTime">Time</label>
+                    <input type="time" id="bTime" required />
+                </div>
+                <div class="field full">
+                    <label for="bMessage">Message (optional)</label>
+                    <textarea id="bMessage" placeholder="Any preferences, references or occasion details"></textarea>
+                </div>
+                <div class="full">
+                    <button type="submit" class="btn-submit">Submit Booking</button>
+                </div>
+                <p class="form-note">Submitting opens WhatsApp with your details pre-filled, ready to send to our desk.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== location (gap removed) ===== -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <div class="rule" style="background:var(--gold);"></div>
+                    <h2>Visit Us</h2>
+                </div>
+                <p>In the heart of Golbagan, opposite Satya Bhawan on H.N Road.</p>
+            </div>
+            <div class="location-grid">
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps?q=Gol+Bagan,+H.N+Road,+Opposite+Satya+Bhawan,+Cooch+Behar,+West+Bengal+736101&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-card" id="contact">
+                    <div class="rule"></div>
+                    <h3>Neeldavid's Salon Golbagan</h3>
+                    <p class="addr">Gol Bagan, H.N Road,<br />Opposite Satya Bhawan,<br />Cooch Behar, West Bengal 736101</p>
+                    <p class="phone">+91 081670 65115</p>
+                    <div class="contact-actions">
+                        <a href="tel:+918167065115" class="btn btn-solid">Call Now</a>
+                        <a href="#" id="waContactBtn" class="btn">WhatsApp Us</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Gol+Bagan,+H.N+Road,+Cooch+Behar,+West+Bengal+736101" target="_blank" rel="noopener" class="btn">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== footer ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="logo">
+                        <span class="name">Neeldavid's</span>
+                        <span class="sub">SALON GOLBAGAN</span>
+                    </a>
+                    <p class="footer-desc">A premium hair, bridal, makeup and skin studio in Golbagan, Cooch Behar — where every visit is finished with care.</p>
+                    <div class="footer-contact-icons">
+                        <a href="tel:+918167065115" class="icon-circle" aria-label="Call">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </a>
+                        <a href="#" id="waFooterBtn" class="icon-circle" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Signature Services</h4>
+                    <ul>
+                        <li><a href="#services">Balayage</a></li>
+                        <li><a href="#services">Bridal Services</a></li>
+                        <li><a href="#services">Make-up</a></li>
+                        <li><a href="#services">Facials</a></li>
+                        <li><a href="#services">Spa Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Gol Bagan, H.N road, opposite Satya Bhawan, Cooch Behar, West Bengal 736101</li>
+                        <li><a href="tel:+918167065115">+91 081670 65115</a></li>
+                        <li>info@neeldavidssalongolbagan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Neeldavid's Salon Golbagan. All rights reserved.</span>
+                <span>Crafted with care in Cooch Behar.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================================
+        // DATA
+        // ============================================================
+        const services = [
+            { name: "Balayage", desc: "Hand-painted, sun-kissed color built for soft dimension and easy grow-out." },
+            { name: "Body Waxing", desc: "Smooth, long-lasting hair removal using gentle, skin-safe wax for all areas." },
+            { name: "Bridal Services", desc: "A complete bridal look — hair and makeup — planned around your special day." },
+            { name: "Facials", desc: "Deep-cleansing, brightening facials tailored to your skin's unique needs." },
+            { name: "Haircut", desc: "Precision cutting shaped to your face, texture and everyday routine." },
+            { name: "Hairstyling", desc: "Editorial-finish blow-outs and styling for events and everyday polish." },
+            { name: "Hair Threading", desc: "Clean, precise threading for naturally defined, long-lasting brows." },
+            { name: "Make-up", desc: "Flawless, occasion-ready application for parties, portraits and events." },
+            { name: "Manicure", desc: "Precise nail shaping, cuticle care and polish, finished by hand." },
+            { name: "Pedicure", desc: "Relaxing, thorough foot treatments that leave skin soft and renewed." },
+            { name: "Shampoo & Conditioning", desc: "Nourishing wash with premium products, followed by a customized conditioning treatment." },
+            { name: "Skin Care", desc: "Customized regimens and treatments for clear, lasting skin health." },
+            { name: "Spa Services", desc: "Full-body relaxation and rejuvenation rituals for mind and skin." },
+            { name: "Waxing", desc: "Smooth, gentle hair removal for all skin types, leaving skin soft and hair-free." },
+            { name: "Wedding & Event Preparation",
+            desc: "Complete bridal party and event styling — hair, makeup and finishing touches for everyone." }
+        ];
+
+        const galleryImages = [
+            { src: "https://images.unsplash.com/photo-1781450090585-1a511b7066d9?auto=format&fit=crop&w=1000&q=80", alt: "Salon interior" },
+            { src: "https://images.unsplash.com/photo-1629397685944-7073f5589754?auto=format&fit=crop&w=1000&q=80", alt: "Hairstyling in progress" },
+            { src: "https://images.unsplash.com/photo-1638064432648-bc2f9a91b06b?auto=format&fit=crop&w=1000&q=80", alt: "Balayage color result" },
+            { src: "https://images.unsplash.com/photo-1636023730877-233b9237d4ec?auto=format&fit=crop&w=1000&q=80", alt: "Bridal makeup application" },
+            { src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80", alt: "Facial treatment" },
+            { src: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1000&q=80", alt: "Manicure at the nail bar" },
+            { src: "https://images.unsplash.com/photo-1709477542149-f4e0e21d590b?auto=format&fit=crop&w=1000&q=80", alt: "Makeup application close-up" },
+            { src: "https://images.unsplash.com/photo-1643684460412-76908d8e5a25?auto=format&fit=crop&w=1000&q=80", alt: "Spa relaxation" },
+            { src: "https://images.unsplash.com/photo-1718720410614-bbb6bd57e2c9?auto=format&fit=crop&w=1000&q=80", alt: "Haircut in progress" },
+            { src: "https://images.unsplash.com/photo-1783013951101-2d9ed3eac234?auto=format&fit=crop&w=1000&q=80", alt: "Eyebrow threading" }
+        ];
+
+        const reviews = [
+            { name: "Ananya Sarkar", role: "Balayage & Haircut", stars: 5,
+                text: "The balayage came out exactly like the reference photo I showed them. My hair has never had this much movement." },
+            { name: "Priyanka Roy", role: "Bridal Services", stars: 5,
+                text: "The bridal team stayed with me through seven hours without a single complaint. My makeup lasted the entire reception." },
+            { name: "Debjani Chakraborty", role: "Facials & Skin Care", stars: 5,
+                text: "Their facials genuinely changed my skin over three sittings. Warm space, gentle hands, honest advice throughout." },
+            { name: "Ritika Barman", role: "Manicure & Pedicure", stars: 4,
+                text: "Best pedicure in Cooch Behar, hands down. Clean tools, comfortable chairs, and they actually listen to what you want." },
+            { name: "Souvik Dutta", role: "Haircut", stars: 5,
+                text: "Got a fresh cut here before a family wedding. Sharp work, unhurried, and fairly priced for the quality." },
+            { name: "Meghna Basu", role: "Wedding & Event Preparation", stars: 5,
+                text: "Neeldavid's team did hair and makeup for my entire bridal party. Every single person looked stunning. Absolute professionals!" }
+        ];
+
+        // ============================================================
+        // RENDER: SERVICES — SINGLE-OPEN ACCORDION (fixed)
+        // ============================================================
+        const accordion = document.getElementById('servicesAccordion');
+
+        services.forEach((s) => {
+            const item = document.createElement('div');
+            item.className = 'accordion-item';
+
+            const trigger = document.createElement('button');
+            trigger.className = 'accordion-trigger';
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.setAttribute('type', 'button');
+
+            trigger.innerHTML = `
+            <span class="title-wrap">
+              <span class="gold-line"></span>
+              <span class="service-name">${s.name}</span>
+            </span>
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="plus">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="minus">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          `;
+
+            const panel = document.createElement('div');
+            panel.className = 'accordion-panel';
+            panel.setAttribute('aria-hidden', 'true');
+
+            const p = document.createElement('p');
+            p.textContent = s.desc;
+            panel.appendChild(p);
+
+            const bookBtn = document.createElement('button');
+            bookBtn.className = 'book-now-inline';
+            bookBtn.setAttribute('type', 'button');
+            bookBtn.dataset.service = s.name;
+            bookBtn.innerHTML = `
+            Book this service
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          `;
+            panel.appendChild(bookBtn);
+
+            item.appendChild(trigger);
+            item.appendChild(panel);
+            accordion.appendChild(item);
+
+            // ---------- single-open accordion logic ----------
+            trigger.addEventListener('click', function(e) {
+                const isCurrentlyActive = item.classList.contains('active');
+
+                // CLOSE ALL items (including this one if active)
+                document.querySelectorAll('.accordion-item').forEach(el => {
+                    el.classList.remove('active');
+                    const pnl = el.querySelector('.accordion-panel');
+                    if (pnl) {
+                        pnl.style.maxHeight = '0';
+                        pnl.setAttribute('aria-hidden', 'true');
+                    }
+                    const trig = el.querySelector('.accordion-trigger');
+                    if (trig) trig.setAttribute('aria-expanded', 'false');
+                });
+
+                // If it was NOT active, open it
+                if (!isCurrentlyActive) {
+                    item.classList.add('active');
+                    const panelHeight = panel.scrollHeight;
+                    panel.style.maxHeight = panelHeight + 'px';
+                    panel.setAttribute('aria-hidden', 'false');
+                    trigger.setAttribute('aria-expanded', 'true');
+                }
+                // if it was active, it's now closed (already handled above)
+            });
+
+            // "Book this service" — scroll to booking & select
+            bookBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const select = document.getElementById('bService');
+                if (select) {
+                    select.value = this.dataset.service;
+                    document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ============================================================
+        // RENDER: GALLERY
+        // ============================================================
+        const galleryGrid = document.getElementById('galleryGrid');
+        galleryImages.forEach((img, i) => {
+            const fig = document.createElement('figure');
+            fig.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy" data-index="${i}">`;
+            galleryGrid.appendChild(fig);
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        let currentIndex = 0;
+
+        function openLightbox(i) {
+            currentIndex = i;
+            lightboxImg.src = galleryImages[i].src.replace('w=1000', 'w=1800');
+            lightboxImg.alt = galleryImages[i].alt;
+            lightbox.classList.add('open');
+        }
+
+        function showDelta(d) {
+            currentIndex = (currentIndex + d + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentIndex].src.replace('w=1000', 'w=1800');
+            lightboxImg.alt = galleryImages[currentIndex].alt;
+        }
+
+        galleryGrid.addEventListener('click', e => {
+            const img = e.target.closest('img');
+            if (!img) return;
+            const idx = Number(img.dataset.index);
+            if (!isNaN(idx)) openLightbox(idx);
+        });
+
+        document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+        document.getElementById('lightboxPrev').addEventListener('click', () => showDelta(-1));
+        document.getElementById('lightboxNext').addEventListener('click', () => showDelta(1));
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') lightbox.classList.remove('open');
+            if (e.key === 'ArrowLeft') showDelta(-1);
+            if (e.key === 'ArrowRight') showDelta(1);
+        });
+
+        // ============================================================
+        // RENDER: REVIEWS
+        // ============================================================
+        const reviewsGrid = document.getElementById('reviewsGrid');
+        reviews.forEach(r => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+            <div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
+            <p class="quote">"${r.text}"</p>
+            <div class="reviewer">
+              <div class="name">${r.name}</div>
+              <div class="role">${r.role}</div>
+            </div>
+          `;
+            reviewsGrid.appendChild(card);
+        });
+
+        // ============================================================
+        // HEADER SCROLL
+        // ============================================================
+        const headerEl = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            headerEl.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // ============================================================
+        // MOBILE NAV TOGGLE
+        // ============================================================
+        const mobileNav = document.getElementById('mobileNav');
+        const menuToggle = document.getElementById('menuToggle');
+        const closeMobile = document.getElementById('closeMobile');
+
+        menuToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+        closeMobile.addEventListener('click', () => mobileNav.classList.remove('open'));
+        mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+        // ============================================================
+        // WHATSAPP
+        // ============================================================
+        const WA_NUMBER = "918167065115";
+        const contactMsg = "Hello Neeldavid's Salon Golbagan, I'd like to book an appointment. Could you help me with availability?";
+        document.getElementById('waContactBtn').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(contactMsg)}`;
+        document.getElementById('waFooterBtn').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(contactMsg)}`;
+
+        // ============================================================
+        // BOOKING FORM → WhatsApp
+        // ============================================================
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('bName').value.trim();
+            const phone = document.getElementById('bPhone').value.trim();
+            const service = document.getElementById('bService').value;
+            const date = document.getElementById('bDate').value;
+            const time = document.getElementById('bTime').value;
+            const message = document.getElementById('bMessage').value.trim();
+
+            let text = `Hello Neeldavid's Salon Golbagan, I'd like to request an appointment.\n\n`;
+            text += `Name: ${name}\n`;
+            text += `Phone: ${phone}\n`;
+            text += `Service: ${service}\n`;
+            text += `Date: ${date}\n`;
+            text += `Time: ${time}`;
+            if (message) text += `\nMessage: ${message}`;
+
+            window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+        });
+
+        // ============================================================
+        // FOOTER YEAR
+        // ============================================================
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
